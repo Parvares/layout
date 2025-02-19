@@ -78,15 +78,17 @@
             gap: 8rem;
         }
 
-        .logo-link {
-            display: flex;
-            align-items: center;
-        }
+  .logo-link {
+        display: flex;
+        justify-content: center;
+        width: 100%;  /* Assicura che il contenitore occupi tutta la larghezza */
+    }
 
         .logo-bianco {
             height: 70px;
             width: auto;
             object-fit: contain;
+            margin: 0 auto;  /* Centra orizzontalmente il logo */
         }
 
         .logo-morante {
@@ -178,8 +180,12 @@
 
             
   /* Increased crimson band height */
+    
     .bottom-band {
-        height: 4cm;  /* Increased from 3.5cm */
+        height: 4cm;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
     }
     
     /* Increased logo size in crimson band */
