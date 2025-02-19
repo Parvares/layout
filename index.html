@@ -40,7 +40,7 @@
             fill: var(--primary);
         }
         .facebook-icon {
-            height: 28px !important; /* Leggermente più grande per compensare */
+            height: 28px !important;
             width: 28px !important;
         }
         .bottom-band {
@@ -49,10 +49,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 4rem;
+            gap: 8rem; /* Aumentato da 4rem a 8rem */
         }
-        .h-12 {
-            height: 3rem;
+        .logo-link {
+            height: 94px; /* Altezza fissa basata sul logo più piccolo */
+            display: flex;
+            align-items: center;
+        }
+        .logo-link img {
+            height: 100%;
             width: auto;
             object-fit: contain;
         }
@@ -73,11 +78,11 @@
             </div>
         </div>
         <div class="bottom-band">
-            <a href="https://www.bibliotechediroma.it/opac/.do">
-                <img src="logobianco.png" alt="Logo Bianco" class="h-12">
+            <a href="https://www.bibliotechediroma.it/opac/.do" class="logo-link">
+                <img src="logobianco.png" alt="Logo Bianco">
             </a>
-            <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2">
-                <img src="logomorante.png" alt="Logo Morante" class="h-12">
+            <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2" class="logo-link">
+                <img src="logomorante.png" alt="Logo Morante">
             </a>
         </div>
     </header>
