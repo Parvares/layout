@@ -3,66 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina con Tailwind CSS</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Header Layout</title>
     <style>
         :root {
-            --primary: #970a2c; /* amaranto */
+            --primary: #970a2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .top-band {
+            height: 1.7cm;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-container img {
+            height: 1.5cm;
+            object-fit: contain;
+        }
+
+        .right-icons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .right-icons img {
+            height: 24px;
+            width: 24px;
+        }
+
+        .bottom-band {
+            height: 6cm;
+            background-color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .bottom-band img {
+            height: 4cm;
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
-    <!-- Fascia bianca superiore -->
-    <div class="bg-white h-[1.7cm] flex items-center justify-between px-4">
-        <!-- Logo a sinistra -->
-        <a href="/" title="Questo link si apre in una nuova finestra">
-            <img src="roma.png" alt="Logo Roma" class="h-8">
-        </a>
-
-        <!-- Icone a destra -->
-        <div class="flex items-center space-x-4">
-            <!-- Icona di ricerca -->
-            <a href="#" title="Cerca nel catalogo delle biblioteche di Roma">
-                <img src="search.svg" alt="Cerca" class="h-6">
+    <header>
+        <div class="top-band">
+            <div class="logo-container">
+                <img src="/roma.png" alt="Logo Roma" title="Questo link si apre in una nuova finestra">
+            </div>
+            <div class="right-icons">
+                <img src="/search.svg" alt="Cerca" title="Cerca nel catalogo delle biblioteche di Roma">
+                <img src="/api/placeholder/24/24" alt="Facebook" title="Questo link si apre in una nuova finestra">
+                <img src="/api/placeholder/24/24" alt="Instagram" title="Questo link si apre in una nuova finestra">
+                <img src="/api/placeholder/24/24" alt="X" title="Questo link si apre in una nuova finestra">
+                <img src="/api/placeholder/24/24" alt="YouTube" title="Questo link si apre in una nuova finestra">
+            </div>
+        </div>
+        <div class="bottom-band">
+            <a href="https://www.bibliotechediroma.it/opac/.do">
+                <img src="/logobianco.png" alt="Logo Bianco">
             </a>
-
-            <!-- Icone dei social -->
-            <a href="#" title="Questo link si apre in una nuova finestra">
-                <img src="facebook.svg" alt="Facebook" class="h-6">
-            </a>
-            <a href="#" title="Questo link si apre in una nuova finestra">
-                <img src="instagram.svg" alt="Instagram" class="h-6">
-            </a>
-            <a href="#" title="Questo link si apre in una nuova finestra">
-                <img src="x.svg" alt="X" class="h-6">
-            </a>
-            <a href="#" title="Questo link si apre in una nuova finestra">
-                <img src="youtube.svg" alt="YouTube" class="h-6">
+            <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2">
+                <img src="/logomorante.png" alt="Logo Morante">
             </a>
         </div>
-    </div>
-
-    <!-- Fascia amaranto -->
-    <div class="bg-[var(--primary)] h-[6cm] flex items-center justify-center space-x-8">
-        <!-- Logo bianco -->
-        <a href="https://www.bibliotechediroma.it/opac/.do">
-            <img src="logobianco.png" alt="Logo Bianco" class="h-12">
-        </a>
-
-        <!-- Logo amaranto -->
-        <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2">
-            <img src="logomorante.png" alt="Logo Morante" class="h-12">
-        </a>
-    </div>
-
-    <!-- Contenuto principale (opzionale) -->
-    <div class="p-4">
-        <!-- Inserisci qui il contenuto della pagina -->
-    </div>
-
-    <!-- Footer amaranto -->
-    <footer class="bg-[var(--primary)] h-[2.7cm] flex items-center justify-center">
-        <p class="text-white">© 2023 Biblioteche di Roma. Tutti i diritti riservati.</p>
-    </footer>
+    </header>
 </body>
 </html>
