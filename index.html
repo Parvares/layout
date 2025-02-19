@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca</title>
+    <title>Biblioteche di Roma</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
     <style>
         :root {
@@ -14,11 +14,11 @@
             background-color: var(--primary);
         }
         
-        .h-top {
+        .h-header-top {
             height: 1.7cm;
         }
         
-        .h-middle {
+        .h-header-main {
             height: 6cm;
         }
         
@@ -27,65 +27,48 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col">
+<body>
     <!-- Fascia bianca superiore -->
-    <header class="h-top bg-white flex justify-between items-center px-6">
-        <div>
+    <header class="bg-white h-header-top w-full flex justify-between items-center px-8">
+        <div class="flex items-center">
             <a href="#" title="Questo link si apre in una nuova finestra">
-                <img src="/api/placeholder/150/60" alt="Logo Roma" class="h-10">
+                <img src="/api/placeholder/150/64" alt="Logo Roma" class="h-16" />
             </a>
         </div>
         
-        <div class="flex items-center gap-6">
+        <div class="flex items-center space-x-6">
             <a href="#" title="Cerca nel catalogo delle biblioteche di Roma">
-                <img src="/api/placeholder/24/24" alt="Search" class="w-6 h-6">
+                <img src="/api/placeholder/24/24" alt="Cerca" class="h-6 w-6" />
             </a>
-            <div class="flex gap-4">
+            
+            <div class="flex space-x-4">
                 <a href="#" title="Questo link si apre in una nuova finestra">
-                    <img src="/api/placeholder/24/24" alt="Facebook" class="w-6 h-6">
+                    <img src="/api/placeholder/24/24" alt="Facebook" class="h-6 w-6" />
                 </a>
                 <a href="#" title="Questo link si apre in una nuova finestra">
-                    <img src="/api/placeholder/24/24" alt="Instagram" class="w-6 h-6">
+                    <img src="/api/placeholder/24/24" alt="Instagram" class="h-6 w-6" />
                 </a>
                 <a href="#" title="Questo link si apre in una nuova finestra">
-                    <img src="/api/placeholder/24/24" alt="X" class="w-6 h-6">
+                    <img src="/api/placeholder/24/24" alt="X" class="h-6 w-6" />
                 </a>
                 <a href="#" title="Questo link si apre in una nuova finestra">
-                    <img src="/api/placeholder/24/24" alt="YouTube" class="w-6 h-6">
+                    <img src="/api/placeholder/24/24" alt="YouTube" class="h-6 w-6" />
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Fascia amaranto con loghi -->
-    <div class="h-middle bg-amaranto flex justify-center items-center gap-16">
+    <!-- Fascia amaranto principale -->
+    <div class="bg-amaranto h-header-main w-full flex justify-center items-center space-x-16">
         <a href="https://www.bibliotechediroma.it/opac/.do">
-            <img src="/api/placeholder/200/80" alt="Logo Bianco" class="h-16">
+            <img src="/api/placeholder/200/80" alt="Logo Bianco" class="h-20" />
         </a>
         <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2">
-            <img src="/api/placeholder/200/80" alt="Logo Morante" class="h-16">
+            <img src="/api/placeholder/200/80" alt="Logo Morante" class="h-20" />
         </a>
     </div>
 
     <!-- Footer amaranto -->
-    <footer class="h-footer bg-amaranto mt-auto text-white flex justify-between items-center px-6">
-        <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2">
-            <img src="/api/placeholder/150/60" alt="Footer Morante" class="h-12">
-        </a>
-        
-        <div class="flex gap-8 text-sm">
-            <div>
-                Via Adolfo Cozza 7<br>
-                Municipio X, 00121 Roma
-            </div>
-            <div>
-                06 4546 0481 / 0483
-            </div>
-            <div>
-                Lunedì-Venerdì 09:00-18:30<br>
-                Sabato 09:00-13:00
-            </div>
-        </div>
-    </footer>
+    <footer class="bg-amaranto h-footer w-full"></footer>
 </body>
 </html>
