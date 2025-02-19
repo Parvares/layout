@@ -3,46 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteche di Roma</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Biblioteca</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
     <style>
         :root {
             --primary: #970a2c;
         }
+        
+        .bg-amaranto {
+            background-color: var(--primary);
+        }
+        
+        .h-top {
+            height: 1.7cm;
+        }
+        
+        .h-middle {
+            height: 6cm;
+        }
+        
+        .h-footer {
+            height: 2.7cm;
+        }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="min-h-screen flex flex-col">
     <!-- Fascia bianca superiore -->
-    <div class="bg-white h-[1.7cm] flex justify-between items-center px-4">
-        <img src="roma.png" alt="Logo Roma" title="Questo link si apre in una nuova finestra" class="h-[1.5cm]">
-        <div class="flex space-x-4 items-center">
-            <img src="search.svg" alt="Cerca" title="Cerca nel catalogo delle biblioteche di Roma" class="h-6 cursor-pointer">
-            <img src="facebook.svg" alt="Facebook" title="Questo link si apre in una nuova finestra" class="h-6 cursor-pointer">
-            <img src="instagram.svg" alt="Instagram" title="Questo link si apre in una nuova finestra" class="h-6 cursor-pointer">
-            <img src="x.svg" alt="X" title="Questo link si apre in una nuova finestra" class="h-6 cursor-pointer">
-            <img src="youtube.svg" alt="YouTube" title="Questo link si apre in una nuova finestra" class="h-6 cursor-pointer">
+    <header class="h-top bg-white flex justify-between items-center px-6">
+        <div>
+            <a href="#" title="Questo link si apre in una nuova finestra">
+                <img src="/api/placeholder/150/60" alt="Logo Roma" class="h-10">
+            </a>
         </div>
-    </div>
+        
+        <div class="flex items-center gap-6">
+            <a href="#" title="Cerca nel catalogo delle biblioteche di Roma">
+                <img src="/api/placeholder/24/24" alt="Search" class="w-6 h-6">
+            </a>
+            <div class="flex gap-4">
+                <a href="#" title="Questo link si apre in una nuova finestra">
+                    <img src="/api/placeholder/24/24" alt="Facebook" class="w-6 h-6">
+                </a>
+                <a href="#" title="Questo link si apre in una nuova finestra">
+                    <img src="/api/placeholder/24/24" alt="Instagram" class="w-6 h-6">
+                </a>
+                <a href="#" title="Questo link si apre in una nuova finestra">
+                    <img src="/api/placeholder/24/24" alt="X" class="w-6 h-6">
+                </a>
+                <a href="#" title="Questo link si apre in una nuova finestra">
+                    <img src="/api/placeholder/24/24" alt="YouTube" class="w-6 h-6">
+                </a>
+            </div>
+        </div>
+    </header>
 
-    <!-- Fascia amaranto -->
-    <div class="bg-[var(--primary)] h-[6cm] flex justify-center items-center space-x-16">
+    <!-- Fascia amaranto con loghi -->
+    <div class="h-middle bg-amaranto flex justify-center items-center gap-16">
         <a href="https://www.bibliotechediroma.it/opac/.do">
-            <img src="logobianco.png" alt="Logo Bianco" class="h-[5cm]">
+            <img src="/api/placeholder/200/80" alt="Logo Bianco" class="h-16">
         </a>
         <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2">
-            <img src="logomorante.png" alt="Logo Morante" class="h-[5cm]">
+            <img src="/api/placeholder/200/80" alt="Logo Morante" class="h-16">
         </a>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-[var(--primary)] h-[2.7cm] flex justify-between items-center px-4 text-white text-sm">
+    <!-- Footer amaranto -->
+    <footer class="h-footer bg-amaranto mt-auto text-white flex justify-between items-center px-6">
         <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2">
-            <img src="footermorante.png" alt="Footer Morante" class="h-[2cm]">
+            <img src="/api/placeholder/150/60" alt="Footer Morante" class="h-12">
         </a>
-        <div class="text-right">
-            <p>Via Adolfo Cozza 7<br>Municipio X, 00121 Roma</p>
-            <p>06 4546 0481 / 0483</p>
-            <p>Lunedì-Venerdì 09:00-18:30 | Sabato 09:00-13:00</p>
+        
+        <div class="flex gap-8 text-sm">
+            <div>
+                Via Adolfo Cozza 7<br>
+                Municipio X, 00121 Roma
+            </div>
+            <div>
+                06 4546 0481 / 0483
+            </div>
+            <div>
+                Lunedì-Venerdì 09:00-18:30<br>
+                Sabato 09:00-13:00
+            </div>
         </div>
     </footer>
 </body>
