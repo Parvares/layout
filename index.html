@@ -82,7 +82,7 @@
             object-fit: contain;
         }
 
-        /* Nascondi il logo Morante su dispositivi mobili */
+        /* Nascondi il logo Morante e riduci l'altezza della fascia amaranto su dispositivi mobili */
         @media (max-width: 768px) {
             .logo-morante {
                 display: none; /* Nasconde il logo Morante */
@@ -90,38 +90,43 @@
             .bottom-band {
                 gap: 0; /* Rimuove lo spazio tra i logo */
                 justify-content: center; /* Centra il logo Bianco */
+                height: 3cm; /* Riduce l'altezza della fascia amaranto */
+            }
+            .logo-bianco {
+                height: 50px; /* Riduci l'altezza del logo Bianco */
             }
         }
 
         /* Updated footer styles */
         .footer {
-            height: 2.7cm;
+            height: auto; /* Altezza automatica per adattarsi al contenuto */
             background-color: var(--primary);
             display: flex;
-            justify-content: space-between;
+            flex-direction: column; /* Cambia la direzione per dispositivi mobili */
+            justify-content: center;
             align-items: center;
-            padding: 0 4rem;
+            padding: 1rem; /* Aggiungi padding per spaziare il contenuto */
             color: white;
             margin-top: auto;
         }
+
         .footer-logo {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
+            margin-bottom: 1rem; /* Spazio sotto il logo */
         }
+
         .footer-logo img {
             height: 1cm;
             width: auto;
             object-fit: contain;
-            margin-right: 2rem;
         }
+
         .footer-info {
-            flex: 2;
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Allinea gli elementi in colonna */
             align-items: center;
-            gap: 3rem;
+            gap: 1rem; /* Spazio tra gli elementi */
         }
+
         .info-item {
             display: flex;
             align-items: center;
@@ -129,19 +134,40 @@
             color: white;
             text-decoration: none;
         }
+
         .info-item svg {
             height: 24px;
             width: 24px;
             fill: white;
         }
+
         .info-item img {
             height: 24px;
             width: 24px;
             filter: brightness(0) invert(1);
         }
+
         .info-text {
             display: flex;
             flex-direction: column;
+            text-align: center; /* Centra il testo */
+        }
+
+        /* Stili specifici per il footer su dispositivi mobili */
+        @media (max-width: 768px) {
+            .footer {
+                padding: 1rem 0.5rem; /* Riduci il padding laterale */
+            }
+            .footer-info {
+                gap: 0.5rem; /* Riduci lo spazio tra gli elementi */
+            }
+            .info-item {
+                flex-direction: column; /* Allinea gli elementi in colonna */
+                text-align: center; /* Centra il testo */
+            }
+            .info-item svg, .info-item img {
+                margin-bottom: 0.5rem; /* Spazio sotto le icone */
+            }
         }
     </style>
 </head>
