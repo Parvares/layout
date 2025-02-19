@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="it">
+<!-- Head section remains the same -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header Layout</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
+        /* Previous styles remain the same until footer section */
         :root {
             --primary: #970a2c;
         }
@@ -24,7 +26,6 @@
         }
         main {
             flex: 1;
-            /* Spazio minimo tra header e footer */
             min-height: 200px;
         }
         .top-band {
@@ -79,6 +80,8 @@
             width: auto;
             object-fit: contain;
         }
+        
+        /* Updated footer styles */
         .footer {
             height: 2.7cm;
             background-color: var(--primary);
@@ -87,17 +90,22 @@
             align-items: center;
             padding: 0 2rem;
             color: white;
-            margin-top: auto; /* Spinge il footer in basso */
+            margin-top: auto;
+        }
+        .footer-logo {
+            margin-left: auto;
+            margin-right: 4rem; /* Increased space between logo and info */
         }
         .footer-logo img {
-            height: 2cm;
+            height: 1.2cm; /* Reduced from 2cm */
             width: auto;
             object-fit: contain;
         }
         .footer-info {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 3rem; /* Increased gap between info items */
+            margin-right: auto; /* Push info section to the left */
         }
         .info-item {
             display: flex;
@@ -123,6 +131,7 @@
     </style>
 </head>
 <body>
+    <!-- Header section remains exactly the same -->
     <header>
         <div class="top-band">
             <div class="logo-container">
