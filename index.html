@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <!-- Head content remains the same -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header Layout</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
-        /* All previous styles remain the same until footer section */
         :root {
             --primary: #970a2c;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         html, body {
             height: 100%;
         }
+
         body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
+
         main {
             flex: 1;
             min-height: 200px;
         }
-        /* Previous header styles remain exactly the same */
+
         .top-band {
             height: 1.7cm;
             background-color: white;
@@ -37,28 +39,34 @@
             align-items: center;
             padding: 0 2rem;
         }
+
         .logo-container img {
             height: 1.2cm;
             object-fit: contain;
         }
+
         .right-icons {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
+
         .right-icons img {
             height: 24px;
             width: 24px;
         }
+
         .right-icons svg {
             height: 24px;
             width: 24px;
             fill: var(--primary);
         }
+
         .facebook-icon {
             height: 28px !important;
             width: 28px !important;
         }
+
         .bottom-band {
             height: 6cm;
             background-color: var(--primary);
@@ -67,64 +75,54 @@
             align-items: center;
             gap: 8rem;
         }
+
         .logo-link {
             display: flex;
             align-items: center;
         }
+
         .logo-bianco {
             height: 70px;
             width: auto;
             object-fit: contain;
         }
+
         .logo-morante {
             height: 160px;
             width: auto;
             object-fit: contain;
         }
 
-        /* Nascondi il logo Morante e riduci l'altezza della fascia amaranto su dispositivi mobili */
-        @media (max-width: 768px) {
-            .logo-morante {
-                display: none; /* Nasconde il logo Morante */
-            }
-            .bottom-band {
-                gap: 0; /* Rimuove lo spazio tra i logo */
-                justify-content: center; /* Centra il logo Bianco */
-                height: 3cm; /* Riduce l'altezza della fascia amaranto */
-            }
-            .logo-bianco {
-                height: 50px; /* Riduci l'altezza del logo Bianco */
-            }
-        }
-
-        /* Updated footer styles */
         .footer {
-            height: auto; /* Altezza automatica per adattarsi al contenuto */
+            height: 2.7cm;
             background-color: var(--primary);
             display: flex;
-            flex-direction: column; /* Cambia la direzione per dispositivi mobili */
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            padding: 1rem; /* Aggiungi padding per spaziare il contenuto */
+            padding: 0 4rem;
             color: white;
             margin-top: auto;
         }
 
         .footer-logo {
-            margin-bottom: 1rem; /* Spazio sotto il logo */
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
         }
 
         .footer-logo img {
             height: 1cm;
             width: auto;
             object-fit: contain;
+            margin-right: 2rem;
         }
 
         .footer-info {
+            flex: 2;
             display: flex;
-            flex-direction: column; /* Allinea gli elementi in colonna */
+            justify-content: center;
             align-items: center;
-            gap: 1rem; /* Spazio tra gli elementi */
+            gap: 3rem;
         }
 
         .info-item {
@@ -150,29 +148,53 @@
         .info-text {
             display: flex;
             flex-direction: column;
-            text-align: center; /* Centra il testo */
         }
 
-        /* Stili specifici per il footer su dispositivi mobili */
         @media (max-width: 768px) {
+            .logo-morante {
+                display: none;
+            }
+            
+            .bottom-band {
+                height: 3cm;
+                gap: 0;
+                justify-content: center;
+            }
+            
             .footer {
-                padding: 1rem 0.5rem; /* Riduci il padding laterale */
+                height: auto;
+                padding: 1rem;
+                flex-direction: column;
+                gap: 1.5rem;
             }
+            
+            .footer-logo {
+                justify-content: center;
+            }
+            
+            .footer-logo img {
+                margin-right: 0;
+            }
+            
             .footer-info {
-                gap: 0.5rem; /* Riduci lo spazio tra gli elementi */
+                flex-direction: column;
+                gap: 1.5rem;
+                width: 100%;
             }
+            
             .info-item {
-                flex-direction: column; /* Allinea gli elementi in colonna */
-                text-align: center; /* Centra il testo */
+                width: 100%;
+                justify-content: center;
+                text-align: center;
             }
-            .info-item svg, .info-item img {
-                margin-bottom: 0.5rem; /* Spazio sotto le icone */
+            
+            .info-text {
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header section remains exactly the same -->
     <header>
         <div class="top-band">
             <div class="logo-container">
@@ -207,11 +229,9 @@
             </a>
         </div>
     </header>
-
     <main>
         <!-- Contenuto della pagina -->
     </main>
-
     <footer class="footer">
         <div class="footer-logo">
             <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2" target="_blank">
