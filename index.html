@@ -152,41 +152,43 @@
             flex-direction: column;
         }
 
-        @media (max-width: 768px) {
-            /* Reduced top white band height */
-            .top-band {
-                height: 1.2cm;
-            }
-
-            .logo-container img {
-                height: 0.9cm;
-            }
-
-            .right-icons img,
-            .right-icons svg {
-                height: 20px;
-                width: 20px;
-            }
-
-            .facebook-icon {
-                height: 24px !important;
-                width: 24px !important;
-            }
+@media (max-width: 768px) {
+    /* Increased top white band height */
+    .top-band {
+        height: 1.4cm;  /* Increased from 1.2cm */
+        display: flex;
+        align-items: center; /* Ensures vertical centering */
+    }
+    
+    .logo-container img {
+        height: 1cm;  /* Increased from 0.9cm */
+    }
+    
+    .right-icons img, 
+    .right-icons svg {
+        height: 22px;  /* Increased from 20px */
+        width: 22px;
+    }
+    
+    .facebook-icon {
+        height: 26px !important;  /* Increased from 24px */
+        width: 26px !important;
+    }
             
-            .logo-morante {
+
+            
+  /* Increased crimson band height */
+    .bottom-band {
+        height: 4cm;  /* Increased from 3.5cm */
+    }
+    
+    /* Increased logo size in crimson band */
+    .logo-bianco {
+        height: 70px;  /* Increased from 60px */
+    }
+
+                .logo-morante {
                 display: none;
-            }
-            
-            /* Increased crimson band height */
-            .bottom-band {
-                height: 3.5cm;
-                gap: 0;
-                justify-content: center;
-            }
-
-            /* Adjusted logo size in crimson band */
-            .logo-bianco {
-                height: 60px;
             }
             
             .footer {
