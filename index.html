@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
-<!-- Head and previous styles remain the same until footer section -->
 <head>
-    <!-- Previous head content remains exactly the same -->
+    <!-- Head content remains the same -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header Layout</title>
@@ -83,69 +82,72 @@
             object-fit: contain;
         }
 
-/* Updated footer styles */
-.footer {
-    height: 2.7cm;
-    background-color: var(--primary);
-    display: flex;
-    justify-content: space-between; /* Distribuisce lo spazio tra gli elementi */
-    align-items: center;
-    padding: 0 4rem; /* Mantieni il padding per dare spazio ai lati */
-    color: white;
-    margin-top: auto;
-}
+        /* Nascondi il logo Morante su dispositivi mobili */
+        @media (max-width: 768px) {
+            .logo-morante {
+                display: none; /* Nasconde il logo Morante */
+            }
+            .bottom-band {
+                gap: 0; /* Rimuove lo spazio tra i logo */
+                justify-content: center; /* Centra il logo Bianco */
+            }
+        }
 
-.footer-logo {
-    flex: 1; /* Permette al logo di occupare spazio disponibile */
-    display: flex;
-    justify-content: flex-end; /* Allinea il logo a destra */
-}
-
-.footer-logo img {
-    height: 1cm; /* Riduci l'altezza del logo */
-    width: auto;
-    object-fit: contain;
-    margin-right: 2rem; /* Sposta il logo più a destra */
-}
-
-.footer-info {
-    flex: 2; /* Permette alle informazioni di occupare più spazio */
-    display: flex;
-    justify-content: center; /* Centra le informazioni */
-    align-items: center;
-    gap: 3rem; /* Spazio tra gli elementi delle informazioni */
-}
-
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: white;
-    text-decoration: none;
-}
-
-.info-item svg {
-    height: 24px;
-    width: 24px;
-    fill: white;
-}
-
-.info-item img {
-    height: 24px;
-    width: 24px;
-    filter: brightness(0) invert(1);
-}
-
-.info-text {
-    display: flex;
-    flex-direction: column;
-}
+        /* Updated footer styles */
+        .footer {
+            height: 2.7cm;
+            background-color: var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4rem;
+            color: white;
+            margin-top: auto;
+        }
+        .footer-logo {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .footer-logo img {
+            height: 1cm;
+            width: auto;
+            object-fit: contain;
+            margin-right: 2rem;
+        }
+        .footer-info {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+        }
+        .info-item svg {
+            height: 24px;
+            width: 24px;
+            fill: white;
+        }
+        .info-item img {
+            height: 24px;
+            width: 24px;
+            filter: brightness(0) invert(1);
+        }
+        .info-text {
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
     <!-- Header section remains exactly the same -->
     <header>
-        <!-- Previous header content remains exactly the same -->
         <div class="top-band">
             <div class="logo-container">
                 <a href="https://culture.roma.it/" target="_blank" title="Questo link si apre in una nuova finestra">
