@@ -49,15 +49,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 8rem; /* Aumentato da 4rem a 8rem */
+            gap: 8rem;
         }
         .logo-link {
-            height: 94px; /* Altezza fissa basata sul logo più piccolo */
             display: flex;
             align-items: center;
         }
-        .logo-link img {
-            height: 100%;
+        .logo-bianco {
+            height: 70px; /* Ridotto da 94px */
+            width: auto;
+            object-fit: contain;
+        }
+        .logo-morante {
+            height: 200px; /* Aumentato significativamente */
             width: auto;
             object-fit: contain;
         }
@@ -79,10 +83,10 @@
         </div>
         <div class="bottom-band">
             <a href="https://www.bibliotechediroma.it/opac/.do" class="logo-link">
-                <img src="logobianco.png" alt="Logo Bianco">
+                <img src="logobianco.png" alt="Logo Bianco" class="logo-bianco">
             </a>
             <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2" class="logo-link">
-                <img src="logomorante.png" alt="Logo Morante">
+                <img src="logomorante.png" alt="Logo Morante" class="logo-morante">
             </a>
         </div>
     </header>
