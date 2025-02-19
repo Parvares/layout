@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
-<!-- Head section remains the same -->
+<!-- Head and previous styles remain the same until footer section -->
 <head>
+    <!-- Previous head content remains exactly the same -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header Layout</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
-        /* Previous styles remain the same until footer section */
+        /* All previous styles remain the same until footer section */
         :root {
             --primary: #970a2c;
         }
@@ -28,6 +29,7 @@
             flex: 1;
             min-height: 200px;
         }
+        /* Previous header styles remain exactly the same */
         .top-band {
             height: 1.7cm;
             background-color: white;
@@ -80,7 +82,7 @@
             width: auto;
             object-fit: contain;
         }
-        
+
         /* Updated footer styles */
         .footer {
             height: 2.7cm;
@@ -93,19 +95,20 @@
             margin-top: auto;
         }
         .footer-logo {
-            margin-left: auto;
-            margin-right: 4rem; /* Increased space between logo and info */
+            margin-right: auto; /* Push logo to the left */
+            margin-left: 2rem; /* Add some space from the left edge */
         }
         .footer-logo img {
-            height: 1.2cm; /* Reduced from 2cm */
+            height: 1.2cm;
             width: auto;
             object-fit: contain;
         }
         .footer-info {
             display: flex;
             align-items: center;
-            gap: 3rem; /* Increased gap between info items */
-            margin-right: auto; /* Push info section to the left */
+            gap: 3rem;
+            margin-left: auto; /* Push info section to the right */
+            margin-right: 2rem; /* Add some space from the right edge */
         }
         .info-item {
             display: flex;
@@ -133,6 +136,7 @@
 <body>
     <!-- Header section remains exactly the same -->
     <header>
+        <!-- Previous header content remains exactly the same -->
         <div class="top-band">
             <div class="logo-container">
                 <a href="https://culture.roma.it/" target="_blank" title="Questo link si apre in una nuova finestra">
