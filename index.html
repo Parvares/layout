@@ -84,35 +84,36 @@
         }
 
 /* Updated footer styles */
-/* Updated footer styles */
 .footer {
     height: 2.7cm;
     background-color: var(--primary);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribuisce lo spazio tra gli elementi */
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 4rem; /* Mantieni il padding per dare spazio ai lati */
     color: white;
     margin-top: auto;
 }
 
 .footer-logo {
-    margin-right: auto;
-    margin-left: 1rem; /* Reduced from 2rem to bring logo more towards center */
+    flex: 1; /* Permette al logo di occupare spazio disponibile */
+    display: flex;
+    justify-content: flex-end; /* Allinea il logo a destra */
 }
 
 .footer-logo img {
-    height: 1.2cm;
+    height: 1cm; /* Riduci l'altezza del logo */
     width: auto;
     object-fit: contain;
+    margin-right: 2rem; /* Sposta il logo più a destra */
 }
 
 .footer-info {
+    flex: 2; /* Permette alle informazioni di occupare più spazio */
     display: flex;
+    justify-content: center; /* Centra le informazioni */
     align-items: center;
-    gap: 3rem;
-    margin-left: auto;
-    margin-right: 1rem; /* Reduced from 2rem to bring info section more towards center */
+    gap: 3rem; /* Spazio tra gli elementi delle informazioni */
 }
 
 .info-item {
