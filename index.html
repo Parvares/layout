@@ -69,34 +69,123 @@
             width: 28px !important;
         }
 
-        .bottom-band {
-            height: 6cm;
-            background-color: var(--primary);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8rem;
-        }
-
-  .logo-link {
+@media (max-width: 768px) {
+    /* Stili mobile rimangono invariati */
+    .top-band {
+        height: 1.4cm;
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo-container img {
+        height: 1cm;
+    }
+    
+    .right-icons img, .right-icons svg {
+        height: 22px;
+        width: 22px;
+    }
+    
+    .facebook-icon {
+        height: 26px !important;
+        width: 26px !important;
+    }
+    
+    .bottom-band {
+        height: 4cm;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .logo-link {
         display: flex;
         justify-content: center;
-        width: 100%;  /* Assicura che il contenitore occupi tutta la larghezza */
+        width: 100%;
     }
+    
+    .logo-bianco {
+        height: 70px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .logo-morante {
+        display: none;
+    }
+    
+    .footer {
+        height: auto;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 0;
+    }
+    
+    .footer-logo {
+        justify-content: center;
+    }
+    
+    .footer-logo img {
+        height: 0.8cm;
+        margin-right: 0;
+    }
+    
+    .footer-info {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+    
+    .info-item {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9em;
+    }
+    
+    .info-item svg, .info-item img {
+        height: 20px;
+        width: 20px;
+    }
+    
+    .info-text {
+        align-items: center;
+    }
+}
 
-        .logo-bianco {
-            display: block;
-            height: 70px;
-            width: auto;
-            object-fit: contain;
-            margin: 0 auto;  /* Centra orizzontalmente il logo */
-        }
+/* Stili desktop */
+.bottom-band {
+    height: 6cm;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem; /* Ridotto da 8rem a 4rem per avvicinare i loghi */
+}
 
-        .logo-morante {
-            height: 160px;
-            width: auto;
-            object-fit: contain;
-        }
+.logo-link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-bianco {
+    display: block;
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.logo-morante {
+    height: 160px;
+    width: auto;
+    object-fit: contain;
+}
 
         .footer {
             height: 2.7cm;
