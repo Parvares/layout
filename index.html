@@ -173,18 +173,13 @@
     width: 100%;
 }
 
-.logo-bianco {
-    display: block;
-    height: 70px;
-    width: auto;
-    object-fit: contain;
-    margin: 0 auto;
-}
-
+.logo-bianco,
 .logo-morante {
-    height: 160px;
-    width: auto;
-    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 1; /* Consente ai loghi di ridursi proporzionalmente */
+    max-width: 100%; /* Impedisce che i loghi superino la larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni delle immagini */
 }
 
         .footer {
