@@ -88,16 +88,17 @@
     height: 2.7cm;
     background-color: var(--primary);
     display: flex;
-    justify-content: center; /* Centra il contenuto del footer */
+    justify-content: space-between; /* Distribuisce lo spazio tra gli elementi */
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 4rem; /* Aumenta il padding per dare più spazio ai lati */
     color: white;
     margin-top: auto;
-    gap: 4rem; /* Aggiungi spazio tra il logo e le informazioni */
 }
 
 .footer-logo {
-    margin-right: auto; /* Rimuovi margin-left e margin-right */
+    flex: 1; /* Permette al logo di occupare spazio disponibile */
+    display: flex;
+    justify-content: flex-start; /* Allinea il logo a sinistra */
 }
 
 .footer-logo img {
@@ -107,10 +108,11 @@
 }
 
 .footer-info {
+    flex: 2; /* Permette alle informazioni di occupare più spazio */
     display: flex;
+    justify-content: center; /* Centra le informazioni */
     align-items: center;
-    gap: 3rem;
-    margin-left: auto; /* Rimuovi margin-right */
+    gap: 3rem; /* Spazio tra gli elementi delle informazioni */
 }
 
 .info-item {
