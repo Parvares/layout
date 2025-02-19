@@ -83,54 +83,61 @@
             object-fit: contain;
         }
 
-        /* Updated footer styles */
-        .footer {
-            height: 2.7cm;
-            background-color: var(--primary);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            color: white;
-            margin-top: auto;
-        }
-        .footer-logo {
-            margin-right: auto; /* Push logo to the left */
-            margin-left: 2rem; /* Add some space from the left edge */
-        }
-        .footer-logo img {
-            height: 1.2cm;
-            width: auto;
-            object-fit: contain;
-        }
-        .footer-info {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-            margin-left: auto; /* Push info section to the right */
-            margin-right: 2rem; /* Add some space from the right edge */
-        }
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: white;
-            text-decoration: none;
-        }
-        .info-item svg {
-            height: 24px;
-            width: 24px;
-            fill: white;
-        }
-        .info-item img {
-            height: 24px;
-            width: 24px;
-            filter: brightness(0) invert(1);
-        }
-        .info-text {
-            display: flex;
-            flex-direction: column;
-        }
+/* Updated footer styles */
+.footer {
+    height: 2.7cm;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    color: white;
+    margin-top: auto;
+}
+
+.footer-logo {
+    margin-right: auto;
+    margin-left: 1rem; /* Reduced from 2rem to bring logo more towards center */
+}
+
+.footer-logo img {
+    height: 1.2cm;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: auto;
+    margin-right: 1rem; /* Reduced from 2rem to bring info section more towards center */
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.info-item svg {
+    height: 24px;
+    width: 24px;
+    fill: white;
+}
+
+.info-item img {
+    height: 24px;
+    width: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+}
     </style>
 </head>
 <body>
