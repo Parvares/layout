@@ -23,7 +23,7 @@
             padding: 0 2rem;
         }
         .logo-container img {
-            height: 1.5cm;
+            height: 1.2cm; /* Ridotto da 1.5cm */
             object-fit: contain;
         }
         .right-icons {
@@ -66,6 +66,46 @@
             width: auto;
             object-fit: contain;
         }
+        .footer {
+            height: 2.7cm;
+            background-color: var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            color: white;
+        }
+        .footer-logo img {
+            height: 2cm;
+            width: auto;
+            object-fit: contain;
+        }
+        .footer-info {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+        }
+        .info-item svg {
+            height: 24px;
+            width: 24px;
+            fill: white;
+        }
+        .info-item img {
+            height: 24px;
+            width: 24px;
+            filter: brightness(0) invert(1);
+        }
+        .info-text {
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
@@ -103,5 +143,34 @@
             </a>
         </div>
     </header>
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2" target="_blank">
+                <img src="footermorante.png" alt="Logo Morante Footer">
+            </a>
+        </div>
+        <div class="footer-info">
+            <a href="https://bibliotecamorante.github.io/mappa/" class="info-item" title="Visualizza la posizione sulla mappa" target="_blank">
+                <img src="location.svg" alt="Indirizzo">
+                <div class="info-text">
+                    <span>Via Adolfo Cozza 7</span>
+                    <span>Municipio X, 00121 Roma</span>
+                </div>
+            </a>
+            <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <div class="info-text">
+                    <span>06 4546 0481 / 0483</span>
+                </div>
+            </div>
+            <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                <div class="info-text">
+                    <span>Lunedì-Venerdì 09:00-18:30</span>
+                    <span>Sabato 09:00-13:00</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
