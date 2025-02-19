@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
-<!-- Head section remains the same until media queries -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header Layout</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
-        /* All previous styles remain exactly the same until media queries */
         :root {
             --primary: #970a2c;
         }
@@ -69,118 +67,31 @@
             width: 28px !important;
         }
 
-@media (max-width: 768px) {
-    /* Stili mobile rimangono invariati */
-    .top-band {
-        height: 1.4cm;
-        display: flex;
-        align-items: center;
-    }
-    
-    .logo-container img {
-        height: 1cm;
-    }
-    
-    .right-icons img, .right-icons svg {
-        height: 22px;
-        width: 22px;
-    }
-    
-    .facebook-icon {
-        height: 26px !important;
-        width: 26px !important;
-    }
-    
-    .bottom-band {
-        height: 4cm;
-        gap: 0;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    
-    .logo-link {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-    
-    .logo-bianco {
-        height: 70px;
-        display: block;
-        margin: 0 auto;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-    
-    .logo-morante {
-        display: none;
-    }
-    
-    .footer {
-        height: auto;
-        padding: 1rem;
-        flex-direction: column;
-        gap: 1.5rem;
-        margin-bottom: 0;
-    }
-    
-    .footer-logo {
-        justify-content: center;
-    }
-    
-    .footer-logo img {
-        height: 0.8cm;
-        margin-right: 0;
-    }
-    
-    .footer-info {
-        flex-direction: column;
-        gap: 1.5rem;
-        width: 100%;
-    }
-    
-    .info-item {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-        font-size: 0.9em;
-    }
-    
-    .info-item svg, .info-item img {
-        height: 20px;
-        width: 20px;
-    }
-    
-    .info-text {
-        align-items: center;
-    }
-}
+        .bottom-band {
+            height: 6cm;
+            background-color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8rem;
+        }
 
-/* Stili desktop */
-.bottom-band {
-    height: 6cm;
-    background-color: var(--primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem; /* Ridotto da 8rem a 4rem per avvicinare i loghi */
-}
+        .logo-link {
+            display: flex;
+            align-items: center;
+        }
 
-.logo-link {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
+        .logo-bianco {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
 
-.logo-bianco,
-.logo-morante {
-    margin: 0;
-    padding: 0;
-    flex-shrink: 1; /* Consente ai loghi di ridursi proporzionalmente */
-    max-width: 100%; /* Impedisce che i loghi superino la larghezza del contenitore */
-    height: auto; /* Mantiene le proporzioni delle immagini */
-}
+        .logo-morante {
+            height: 160px;
+            width: auto;
+            object-fit: contain;
+        }
 
         .footer {
             height: 2.7cm;
@@ -239,99 +150,50 @@
             flex-direction: column;
         }
 
-@media (max-width: 768px) {
-    /* Aumenta l'altezza della banda superiore */
-    .top-band {
-        height: 1.4cm;
-        display: flex;
-        align-items: center;
-    }
-    
-    .logo-container img {
-        height: 1cm;
-    }
-    
-    .right-icons img, .right-icons svg {
-        height: 22px;
-        width: 22px;
-    }
-    
-    .facebook-icon {
-        height: 26px !important;
-        width: 26px !important;
-    }
-    
-    /* Aumenta l'altezza della banda inferiore */
-    .bottom-band {
-        height: 4cm;
-        gap: 0;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; /* Aggiunto per garantire l'allineamento verticale */
-    }
-    
-    /* Centra il logo bianco */
-    .logo-link {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-    
-    .logo-bianco {
-        height: 70px;
-        display: block;
-        margin: 0 auto;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-    
-    .logo-morante {
-        display: none;
-    }
-    
-    /* Il resto dello stile mobile rimane invariato */
-    .footer {
-        height: auto;
-        padding: 1rem;
-        flex-direction: column;
-        gap: 1.5rem;
-        margin-bottom: 0;
-    }
-    
-    .footer-logo {
-        justify-content: center;
-    }
-    
-    .footer-logo img {
-        height: 0.8cm;
-        margin-right: 0;
-    }
-    
-    .footer-info {
-        flex-direction: column;
-        gap: 1.5rem;
-        width: 100%;
-    }
-    
-    .info-item {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-        font-size: 0.9em;
-    }
-    
-    .info-item svg, .info-item img {
-        height: 20px;
-        width: 20px;
-    }
-    
-    .info-text {
-        align-items: center;
-    }
-}
+        @media (max-width: 768px) {
+            .logo-morante {
+                display: none;
+            }
+            
+            .bottom-band {
+                height: 3cm;
+                gap: 0;
+                justify-content: center;
+            }
+            
+            .footer {
+                height: auto;
+                padding: 1rem;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .footer-logo {
+                justify-content: center;
+            }
+            
+            .footer-logo img {
+                margin-right: 0;
+            }
+            
+            .footer-info {
+                flex-direction: column;
+                gap: 1.5rem;
+                width: 100%;
+            }
+            
+            .info-item {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .info-text {
+                align-items: center;
+            }
+        }
     </style>
 </head>
-<!-- Rest of the HTML remains exactly the same -->
 <body>
     <header>
         <div class="top-band">
