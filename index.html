@@ -14,6 +14,19 @@
             padding: 0;
             box-sizing: border-box;
         }
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+            /* Spazio minimo tra header e footer */
+            min-height: 200px;
+        }
         .top-band {
             height: 1.7cm;
             background-color: white;
@@ -23,7 +36,7 @@
             padding: 0 2rem;
         }
         .logo-container img {
-            height: 1.2cm; /* Ridotto da 1.5cm */
+            height: 1.2cm;
             object-fit: contain;
         }
         .right-icons {
@@ -74,6 +87,7 @@
             align-items: center;
             padding: 0 2rem;
             color: white;
+            margin-top: auto; /* Spinge il footer in basso */
         }
         .footer-logo img {
             height: 2cm;
@@ -143,6 +157,11 @@
             </a>
         </div>
     </header>
+
+    <main>
+        <!-- Contenuto della pagina -->
+    </main>
+
     <footer class="footer">
         <div class="footer-logo">
             <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2" target="_blank">
