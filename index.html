@@ -248,15 +248,31 @@
         </div>
     </header>
     
-    <main>
-        <p>Consulta gli orari di apertura della Biblioteca Elsa Morante:</p>
+<main>
+    <p>Consulta gli orari di apertura della Biblioteca Elsa Morante:</p>
+    <a href="javascript:void(0)" 
+       class="orari-link" 
+       onclick="handleOrariClick()">
+       Orari di apertura
+    </a>
+</main>
 
-<a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2" 
-   target="_blank" 
-   class="orari-link"
-   onclick="setTimeout(() => { window.open('https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2#where_openings', '_blank'); }, 500);">
-   Orari di apertura
-</a>
+<script>
+function handleOrariClick() {
+    // URL base della pagina
+    const baseUrl = 'https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2';
+    
+    // Apri in una nuova finestra
+    const win = window.open(baseUrl, '_blank');
+    
+    // Aspetta che la pagina sia caricata e poi naviga all'anchor
+    if (win) {
+        win.addEventListener('load', function() {
+            win.location.hash = 'where_openings';
+        });
+    }
+}
+</script>
 
 
         
