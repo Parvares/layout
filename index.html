@@ -273,14 +273,13 @@ function handleOrariClick(event) {
     const url = 'https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2';
     const win = window.open(url, '_blank');
 
-    // Attendi che la pagina sia caricata
-    win.addEventListener('load', function() {
-        // Forza lo scroll verso l'elemento con l'ID "where_openings"
+    // Attendi 1 secondo prima di eseguire lo scroll
+    setTimeout(() => {
         const targetElement = win.document.getElementById('where_openings');
         if (targetElement) {
             targetElement.scrollIntoView({ behavior: 'smooth' });
         }
-    });
+    }, 1000); // Ritardo di 1 secondo
 }
 </script>
 
