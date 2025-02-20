@@ -253,12 +253,18 @@
 
     
     
-<a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2#where_openings" 
-   target="_blank" 
+<a href="javascript:void(0);" 
    class="orari-link" 
-   onclick="setTimeout(() => { window.open(this.href, '_blank'); }, 500); return false;">
+   onclick="handleOrariClick()">
    Orari di apertura
 </a>
+
+<script>
+function handleOrariClick() {
+    const url = 'https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2#where_openings';
+    window.open(url, '_blank');
+}
+</script>
 
 
     
