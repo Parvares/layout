@@ -256,22 +256,7 @@
 </a>
 </main>
 
-<script>
-function handleOrariClick() {
-    // URL base della pagina
-    const baseUrl = 'https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2';
-    
-    // Apri in una nuova finestra
-    const win = window.open(baseUrl, '_blank');
-    
-    // Aspetta che la pagina sia caricata e poi naviga all'anchor
-    if (win) {
-        win.addEventListener('load', function() {
-            win.location.hash = 'where_openings';
-        });
-    }
-}
-</script>
+
 
 
         
