@@ -260,12 +260,29 @@
 
     
     
-  <a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2#where_openings" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     onclick="event.preventDefault(); window.open(this.href, '_blank');">
-     Orari di apertura
-  </a>
+<a href="https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2" 
+   target="_blank" 
+   class="orari-link" 
+   onclick="handleOrariClick(event)">
+   Orari di apertura
+</a>
+
+<script>
+function handleOrariClick(event) {
+    event.preventDefault(); // Impedisce il comportamento predefinito del link
+    const url = 'https://www.bibliotechediroma.it/opac/library/Biblioteca%20Elsa%20Morante/RMBO2';
+    const win = window.open(url, '_blank');
+
+    // Attendi che la pagina sia caricata
+    win.addEventListener('load', function() {
+        // Forza lo scroll verso l'elemento con l'ID "where_openings"
+        const targetElement = win.document.getElementById('where_openings');
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+}
+</script>
 
 
     
